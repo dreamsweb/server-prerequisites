@@ -1,0 +1,11 @@
+alias gd='git pull origin develop'
+alias gm='git pull origin master'
+
+# If this is an xterm set the title to user@host:dir
+case $TERM in
+xterm)
+     PS1='\[\033]0;\w\007\n\033[<%= @user_color %>\]\u@\h \[\033[33m\w\033[0m\]\n\$ ';
+     ;;
+*)
+     PS1='\n\t> \033[<%= @user_color %>\]\u@\h \[\033[33m\w\033[0m\]\n\$ ';
+esac

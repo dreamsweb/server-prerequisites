@@ -31,3 +31,19 @@ template "/home/#{node[:username]}/.gitconfig" do
   mode "0644"
   source "git_config.erb"
 end
+
+template "/home/#{node[:username]}/.bash_aliases" do
+  owner node[:username]
+  group node[:usergroup]
+  mode "0644"
+  source "bash_aliases.erb"
+  variables({ :user_color => "32m"})
+end
+
+template "/root/.bash_aliases" do
+  owner "root"
+  group "root"
+  mode "0644"
+  source "bash_aliases.erb"
+  variables({ :user_color => "31m"})
+end
