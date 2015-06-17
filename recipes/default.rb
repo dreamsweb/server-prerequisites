@@ -8,6 +8,7 @@ package 'grep'
 package 'tar'
 package 'curl'
 package 'git'
+package 'python-software-properties'
 
 # Add additional locales
 if node[:locales]
